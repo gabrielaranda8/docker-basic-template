@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  test_docker:
+    build: .
+    command: python app.py
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/test_docker
+    environment:
+      - PYTHONUNBUFFERED=1
